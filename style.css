@@ -248,3 +248,88 @@ footer {
     height: auto;
   }
 }
+/* === Mobile Responsive Styles === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .booking-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .room-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .room-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* Make sure all images scale well */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form input sizing */
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  font-size: 1rem;
+  padding: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* === Animation Keyframes === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Animation Classes === */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

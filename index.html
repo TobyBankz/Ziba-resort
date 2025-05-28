@@ -2,37 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziba Beach Resort | Luxury Escape by the Ocean</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Ziba Beach Resort offers luxurious oceanfront rooms, gourmet dining, and breathtaking views in Lagos, Nigeria. Book your tropical escape today!" />
-  <meta name="keywords" content="Ziba Beach Resort, Beach Hotel Lagos, Ocean View Rooms, Luxury Resort Nigeria, Book Resort" />
-  <meta name="author" content="Ziba Beach Resort" />
-
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Ziba Beach Resort" />
-  <meta property="og:description" content="Discover luxury and tranquility by the sea at Ziba Beach Resort in Lagos." />
-  <meta property="og:image" content="https://tobybankz.github.io/Ziba-resort/images/room.jpeg" />
-  <meta property="og:url" content="https://tobybankz.github.io/Ziba-resort/index.html" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ziba Beach Resort" />
-  <meta name="twitter:description" content="Book a luxurious stay by the sea at Ziba Beach Resort." />
-  <meta name="twitter:image" content="https://tobybankz.github.io/Ziba-resort/images/room.jpeg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-
-  <!-- Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziba Beach Resort | Welcome</title>
+  <meta name="description" content="Welcome to Ziba Beach Resort – your luxurious beachfront escape. Explore our rooms, book your stay, and unwind in paradise."/>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <h1 class="logo">Ziba Beach Resort</h1>
-    <nav>
+    <nav class="desktop-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -41,21 +21,32 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1>Welcome to Ziba Beach Resort</h1>
-      <p>Relax, Unwind, and Enjoy Paradise</p>
+      <p>Discover luxury and tranquility by the sea. Your perfect getaway starts here.</p>
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <h2>About Us</h2>
-    <p>Ziba Beach Resort is a premier beachfront destination offering elegant accommodations, fine dining, and unforgettable ocean views. Whether you're seeking a romantic escape, a family vacation, or a peaceful solo retreat, we provide the perfect setting to unwind and recharge.</p>
+    <p>Ziba Beach Resort is a premier beachfront destination offering elegant accommodations, fine dining, and unforgettable ocean views.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-left">
     <h2>Contact Us</h2>
     <p>Email: reservations@zibabeachresort.com<br>
     Phone: +234 800 123 4567<br>
@@ -65,5 +56,13 @@
   <footer>
     <p>&copy; 2025 Ziba Beach Resort. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

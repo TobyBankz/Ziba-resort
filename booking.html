@@ -2,52 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziba Beach Resort | Luxury Escape by the Ocean</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Ziba Beach Resort offers luxurious oceanfront rooms, gourmet dining, and breathtaking views in Lagos, Nigeria. Book your tropical escape today!" />
-  <meta name="keywords" content="Ziba Beach Resort, Beach Hotel Lagos, Ocean View Rooms, Luxury Resort Nigeria, Book Resort" />
-  <meta name="author" content="Ziba Beach Resort" />
-
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Ziba Beach Resort" />
-  <meta property="og:description" content="Discover luxury and tranquility by the sea at Ziba Beach Resort in Lagos." />
-  <meta property="og:image" content="https://tobybankz.github.io/Ziba-resort/images/room.jpeg" />
-  <meta property="og:url" content="https://tobybankz.github.io/Ziba-resort/index.html" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ziba Beach Resort" />
-  <meta name="twitter:description" content="Book a luxurious stay by the sea at Ziba Beach Resort." />
-  <meta name="twitter:image" content="https://tobybankz.github.io/Ziba-resort/images/room.jpeg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-
-  <!-- Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Stay | Ziba Beach Resort</title>
+  <meta name="description" content="Book your stay at Ziba Beach Resort. Choose your room, select your dates, and prepare to enjoy a luxurious vacation." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <h1 class="logo">Ziba Beach Resort</h1>
-    <nav>
+    <nav class="desktop-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="booking.html">Book Now</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1>Book Your Stay</h1>
-      <p>Plan your getaway with Ziba Beach Resort</p>
-      <form class="booking-form">
+      <p>Reserve your dream vacation with ease. Choose your dates and room type below.</p>
+      <form class="booking-form" action="thankyou.html">
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email Address" required />
         <input type="date" required />
@@ -66,5 +52,13 @@
   <footer>
     <p>&copy; 2025 Ziba Beach Resort. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
