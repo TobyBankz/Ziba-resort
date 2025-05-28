@@ -199,3 +199,52 @@ footer {
     margin: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header, nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .room-card {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .booking-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input, select, button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
