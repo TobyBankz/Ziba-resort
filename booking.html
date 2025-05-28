@@ -2,63 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book your stay at Ziba Beach Resort - luxury, comfort, and ocean views." />
+  <meta name="keywords" content="Ziba Beach Resort, booking, beach resort, hotel, vacation" />
+  <meta name="author" content="Ziba Beach Resort" />
   <title>Book Your Stay | Ziba Beach Resort</title>
-  <meta name="description" content="Book your stay at Ziba Beach Resort. Choose your room, select your dates, and prepare to enjoy a luxurious vacation." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <h1 class="logo">Ziba Beach Resort</h1>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html">Book Now</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-nav" id="mobileNav">
+    <div class="container">
+      <h1 class="logo">Ziba Beach Resort</h1>
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="booking.html" class="active">Book Now</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" data-aos="fade-up">
-    <div class="hero-content">
-      <h1>Book Your Stay</h1>
-      <p>Reserve your dream vacation with ease. Choose your dates and room type below.</p>
-      <form class="booking-form" action="thankyou.html">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="date" required />
-        <input type="date" required />
-        <select required>
-          <option value="">Select Room Type</option>
-          <option value="ocean">Ocean View Room</option>
-          <option value="garden">Garden Suite</option>
-          <option value="villa">Family Villa</option>
-        </select>
-        <button type="submit">Confirm Booking</button>
+  <section class="booking-form scroll-fade">
+    <div class="container">
+      <h2>Book Your Stay</h2>
+      <form action="thankyou.html" method="POST">
+        <div>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div>
+          <label for="checkin">Check-in Date</label>
+          <input type="date" id="checkin" name="checkin" required />
+        </div>
+        <div>
+          <label for="checkout">Check-out Date</label>
+          <input type="date" id="checkout" name="checkout" required />
+        </div>
+        <div>
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" required />
+        </div>
+        <div>
+          <label for="room">Room Type</label>
+          <select id="room" name="room" required>
+            <option value="">Select Room Type</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="ocean">Ocean View</option>
+            <option value="suite">Luxury Suite</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Submit Booking</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ziba Beach Resort. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Ziba Beach Resort. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('active');
-    }
-  </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script src="script.js"></script>
 </body>
 </html>

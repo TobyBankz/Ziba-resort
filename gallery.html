@@ -7,9 +7,21 @@
   <meta name="description" content="Explore beautiful rooms and views from Ziba Beach Resort. Take a virtual tour of our luxurious rooms and suites." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
+
   <header>
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <h1 class="logo">Ziba Beach Resort</h1>
     <nav class="desktop-nav">
@@ -19,15 +31,6 @@
         <li><a href="booking.html">Book Now</a></li>
       </ul>
     </nav>
-    <div class="mobile-nav" id="mobileNav">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Book Now</a></li>
-        </ul>
-      </nav>
-    </div>
   </header>
 
   <main class="rooms-container">
@@ -67,7 +70,7 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('active');
+      document.getElementById('mobileNav').classList.toggle('open');
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>

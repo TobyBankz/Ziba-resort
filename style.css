@@ -1,4 +1,4 @@
-/* Reset and global styles */
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -6,330 +6,163 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
   color: #333;
-  background-color: #fff;
+  line-height: 1.6;
 }
 
-/* Header */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER & NAV */
 header {
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  background: #005f73;
+  color: white;
+  padding: 1rem 0;
+  position: relative;
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
+nav {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section (used for both homepage and booking) */
-.hero {
-  background-image: url('images/beach-bg.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  width: 90%;
-  max-width: 500px;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.hero-content p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-/* Booking Form */
-.booking-form {
-  margin-top: 20px;
+.nav-links {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 1.5rem;
 }
 
-.booking-form input,
-.booking-form select,
-.booking-form button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.95);
-}
-
-.booking-form button {
-  background-color: #4CAF50;
+.nav-links li a {
   color: white;
-  font-weight: bold;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #94d2bd;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.booking-form button:hover {
-  background-color: #45a049;
-}
-
-/* Room Cards (rooms.html) */
-.rooms-container {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.room-card {
-  margin-bottom: 40px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.room-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.room-card h2 {
-  margin-top: 15px;
-  font-size: 24px;
-}
-
-.room-card p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.price {
-  color: green;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-/* About & Contact Sections */
-#about, #contact {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 60px auto;
-  background-color: #f9f9f9;
-  color: #333;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-#about h2, #contact h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li {
-    margin: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-    padding: 0 10px;
-  }
-
-  header, nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .room-card {
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .booking-form {
-    width: 100%;
-    padding: 10px;
-  }
-
-  input, select, button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-/* === Mobile Responsive Styles === */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .booking-form {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .room-card {
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  .room-card img {
-    width: 100%;
-    height: auto;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-}
-
-/* Make sure all images scale well */
-img {
-  max-width: 100%;
-  height: auto;
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
   display: block;
 }
 
-/* Form input sizing */
-.booking-form input,
-.booking-form select,
-.booking-form button {
-  font-size: 1rem;
-  padding: 12px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-/* === Animation Keyframes === */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* HERO SECTION */
+.hero {
+  background: url('images/beach-hero.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
 }
 
-/* === Animation Classes === */
-.animate {
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 95, 115, 0.6);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+}
+
+.btn {
+  background: #94d2bd;
+  color: #005f73;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* ABOUT & CONTACT */
+.about, .contact {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.about h2, .contact h2 {
+  font-size: 2rem;
+  color: #005f73;
+}
+
+.about p, .contact p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: #003d4d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* SCROLL ANIMATIONS */
+.scroll-fade {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.animate.visible {
+.scroll-fade.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #005f73;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
