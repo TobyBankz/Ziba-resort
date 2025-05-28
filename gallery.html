@@ -10,34 +10,29 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-
   <header>
-    <div class="mobile-nav" id="mobileNav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html">Book Now</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="container">
+      <h1 class="logo">Ziba Beach Resort</h1>
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <h1 class="logo">Ziba Beach Resort</h1>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html">Book Now</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main class="rooms-container">
     <h2 style="text-align:center;">Our Rooms</h2>
 
     <div class="room-card" data-aos="fade-up">
-      <a href="images/room.jpeg" data-lightbox="room1" data-title="Ocean View Room - Main View">
+      <a href="images/room.jpeg" data-lightbox="rooms" data-title="Ocean View Room - Main View">
         <img src="images/room.jpeg" alt="Ocean View Room" />
       </a>
       <h2>Ocean View Room</h2>
@@ -46,7 +41,7 @@
     </div>
 
     <div class="room-card" data-aos="fade-up" data-aos-delay="200">
-      <a href="images/View.jpeg" data-lightbox="room2" data-title="Garden Suite">
+      <a href="images/View.jpeg" data-lightbox="rooms" data-title="Garden Suite">
         <img src="images/View.jpeg" alt="Garden Suite" />
       </a>
       <h2>Garden Suite</h2>
@@ -55,7 +50,7 @@
     </div>
 
     <div class="room-card" data-aos="fade-up" data-aos-delay="400">
-      <a href="images/Bar.jpeg" data-lightbox="room3" data-title="Family Villa">
+      <a href="images/Bar.jpeg" data-lightbox="rooms" data-title="Family Villa">
         <img src="images/Bar.jpeg" alt="Family Villa" />
       </a>
       <h2>Family Villa</h2>
@@ -68,11 +63,7 @@
     <p>&copy; 2025 Ziba Beach Resort. All rights reserved.</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('open');
-    }
-  </script>
+  <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
